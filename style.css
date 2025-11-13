@@ -550,7 +550,6 @@ header {
 .slide-track {
   display: flex;
   width: calc(250px * 16);
-  animation: scroll 25s linear infinite;
 }
 
 .slide {
@@ -574,10 +573,26 @@ header {
   box-shadow: 0 0 20px #00bcd4;
 }
 
-/* Infinite Scroll Animation */
-@keyframes scroll {
+/* Animation for first slider (left) */
+.slider-left .slide-track {
+  animation: scroll-left 25s linear infinite;
+}
+
+/* Animation for second slider (right) */
+.slider-right .slide-track {
+  animation: scroll-right 25s linear infinite;
+}
+
+/* Scroll left */
+@keyframes scroll-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-250px * 8)); }
+}
+
+/* Scroll right */
+@keyframes scroll-right {
+  0% { transform: translateX(calc(-250px * 8)); }
+  100% { transform: translateX(0); }
 }
 
 /* Responsive Design */
@@ -589,7 +604,6 @@ header {
     font-size: 2rem;
   }
 }
-
 /* Education Section */
 .education-section {
   padding: 80px 10%;
