@@ -8,6 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// Always scroll to top on page load
+window.addEventListener('beforeunload', function () {
+  window.scrollTo(0, 0);
+});
+
 // Typing Effect
 const textArray = [
   "Software Engineer",
