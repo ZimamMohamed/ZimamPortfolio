@@ -15,7 +15,6 @@ window.addEventListener('beforeunload', function () {
 
 // Typing Effect
 const textArray = [
-  "Founder & CEO at TEXHIVE",
   "Software Engineer",
   "UI/UX Designer",
   "IT Support Specialist",
