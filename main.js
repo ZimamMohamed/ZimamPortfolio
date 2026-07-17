@@ -1,91 +1,97 @@
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+// ==========================================================
+// Alex Rivera Portfolio — interactions
+// ==========================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  /* ---- Footer year ---- */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---- Mobile nav toggle ---- */
+  const navWrap = document.querySelector('.nav-wrap');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.querySelectorAll('#navLinks a');
+
+  if (navToggle && navWrap) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navWrap.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-  });
-});
 
-// Always scroll to top on page load
-window.addEventListener('beforeunload', function () {
-  window.scrollTo(0, 0);
-});
-
-// Typing Effect
-const textArray = [
-  "Software Engineer",
-  "UI/UX Designer",
-  "IT Support Specialist",
-  "UX Researcher"
-];
-
-let typingElement = document.getElementById("typing-text");
-let arrayIndex = 0;
-let charIndex = 0;
-let currentText = "";
-let isDeleting = false;
-let typingSpeed = 120;
-let deleteSpeed = 60;
-let delayBetweenWords = 1000;
-
-function typeEffect() {
-  currentText = textArray[arrayIndex];
-  
-  if (isDeleting) {
-    typingElement.textContent = currentText.substring(0, charIndex--);
-    if (charIndex < 0) {
-      isDeleting = false;
-      arrayIndex = (arrayIndex + 1) % textArray.length;
-    }
-  } else {
-    typingElement.textContent = currentText.substring(0, charIndex++);
-    if (charIndex > currentText.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, delayBetweenWords);
-      return;
-    }
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navWrap.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
-  setTimeout(typeEffect, isDeleting ? deleteSpeed : typingSpeed);
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  typeEffect();
-});
+  /* ---- Scroll reveal animations ---- */
+  const revealEls = document.querySelectorAll('.reveal');
 
-const form = document.querySelector('form');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        alert('✅ Thank you! Your message has been sent successfully.');
-        form.reset();
-      } else {
-        alert('❌ Oops! Something went wrong. Please try again.');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+  } else {
+    // Fallback: just show everything
+    revealEls.forEach(el => el.classList.add('in-view'));
+  }
+
+  /* ---- Subtle nav background on scroll ---- */
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (!nav) return;
+    if (window.scrollY > 24) {
+      nav.style.background = 'rgba(255,255,255,0.09)';
+    } else {
+      nav.style.background = '';
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---- Ambient orb parallax on mouse move (desktop only) ---- */
+  const orbs = document.querySelectorAll('.orb');
+  if (window.matchMedia('(pointer: fine)').matches && orbs.length) {
+    let rafId = null;
+    let targetX = 0, targetY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      targetX = (e.clientX / window.innerWidth - 0.5) * 2;
+      targetY = (e.clientY / window.innerHeight - 0.5) * 2;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(() => {
+          orbs.forEach((orb, i) => {
+            const strength = (i + 1) * 8;
+            orb.style.transform = `translate(${targetX * strength}px, ${targetY * strength}px)`;
+          });
+          rafId = null;
+        });
+      }
+    });
+  }
+
+  /* ---- Smooth-scroll for in-page anchor links ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1) {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       }
     });
   });
 
-  const menuIcon = document.getElementById('menuIcon');
-const navLinks = document.getElementById('navLinks');
-
-menuIcon.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  menuIcon.classList.toggle('active');
 });
-
-// Close menu when clicking a link (optional)
-document.querySelectorAll('.nav-links li a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    menuIcon.classList.remove('active');
-  });
-});
-
-
-  

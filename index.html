@@ -1,432 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zimam | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" type="image/x-icon" href="image/jobb.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zimam — Product &amp; UI/UX Designer</title>
+<meta name="description" content="Zimam — Product Designer &amp; UI/UX Designer crafting clear, human digital products.">
+
+<!-- ============================================================
+     EASY-EDIT GUIDE
+     1. Your name / title / tagline  → search for "EDIT: HERO"
+     2. Your photo                    → images/profile.jpg
+     3. About text                    → search for "EDIT: ABOUT"
+     4. Project covers & copy         → images/project-#-cover.jpg + "EDIT: PROJECT"
+     5. Experience / timeline         → "EDIT: EXPERIENCE"
+     6. Testimonials                  → "EDIT: TESTIMONIALS"
+     7. Contact links / email         → "EDIT: CONTACT"
+     8. Colors / fonts                → css/style.css, the :root block at the top
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Navbar -->
-  <header>
-  <nav class="navbar">
-    <div class="logo">Zimam.</div>
 
+<!-- Ambient gradient orbs behind everything -->
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+<div class="bg-grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav-wrap">
+  <nav class="glass nav" id="nav">
+    <a href="#top" class="nav-mark">ZM<span class="dot">.</span></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
     </ul>
-
-    <div class="menu-icon" id="menuIcon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    <a href="#contact" class="btn btn-small nav-cta">Let's talk</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </header>
 
+<main id="top">
 
-  <!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <img src="image/zimamp.png" alt="Mohamed Zimam" class="hero-img" />
-    <h2>Hello, I'm <span class="highlight">Mohamed Zimam</span></h2>
-    <h3><span id="typing-text"></span></h3>
-    <p>Creating digital experiences through design and technology.</p>
-    <div class="hero-buttons">
-    <a href="#contact" class="btn-about">Get in touch</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- About Section -->
-  <section id="about" class="about-section">
-  <div class="container">
-    <div class="about-image">
-      <img src="image/Zimampro.png" alt="Mohamed Zimam">
-    </div>
-
-    <div class="about-content">
-      <h2>About Me</h2>
-      <h3>I'm <span class="highlight">Mohamed Zimam</span></h3>
-      <p style="text-align: justify;">
-        I’m a passionate <strong>Software Engineer</strong> and <strong>UI/UX Designer</strong> from Sri Lanka. 
-        I specialize in crafting clean, user-friendly, and visually stunning digital experiences. 
-        I combine creativity with functionality to bring ideas to life — from concept to final design.
-      </p>
-      <p style="text-align: justify;">
-        I’m skilled in <strong>web development</strong> and enjoy building modern, responsive, and high-performance websites. I also have experience in <strong>Database Management, IT Support, Search Engine Optimization (SEO)</strong>, and <strong>System Administration</strong>. A <strong>cloud enthusiast</strong>, my goal is to design experiences that connect people and technology beautifully.
-      </p>
-
-      <div class="about-info">
-        <div><strong>Age:</strong> 23</div>
-        <div><strong>Country:</strong> Sri Lanka</div>
-        <div><strong>Email:</strong> jmzimam18@gmail.com</div>
-        <div><strong>Freelance:</strong> Available</div>
-        <div><strong>Full Time:</strong> Available</div>
-      </div>
-
-      <a href="#contact" class="btn-about">Hire Me</a>
-      <a href="image/ZimamUXN.pdf" class="btn-about btn-outline" target="_blank">Download Resume</a>
-    </div>
-  </div>
-</section>
-
-<!-- Experince Section -->
- <section class="experience" id="experience">
-  <h2 class="section-title"><span>Experience</span></h2>
-
-  <div class="experience-container">
-
-    <div class="exp-card">
-      <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
-      <div class="exp-content">
-        <h3>UI/UX Designer – ELEGANT MEDIA</h3>
-        <span class="exp-date">2023 - 2025</span>
-        <p>Designing user-centered dashboards, landing pages, and Mobile applications with Figma and Adobe XD. Focused on enhancing usability and aesthetics for clients across multiple industries.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Skills Section -->
-<section id="skills" class="skills-section">
-  <h2 class="section-title">My Skills</h2>
-  <p class="section-subtitle">Technologies & Tools I Use</p>
-
-  <!-- First slider (moves left) -->
-  <div class="slider slider-left">
-    <div class="slide-track">
-      <div class="slide"><img src="image/html.png" alt="HTML"></div>
-      <div class="slide"><img src="image/css.png" alt="CSS"></div>
-      <div class="slide"><img src="image/js.png" alt="JavaScript"></div>
-      <div class="slide"><img src="image/canva.png" alt="canva"></div>
-      <div class="slide"><img src="image/figma.png" alt="Figma"></div>
-      <div class="slide"><img src="image/git.png" alt="GitHub"></div>
-      <div class="slide"><img src="image/vs code.png" alt="VS Code"></div>
-
-      <!-- Duplicate for infinite effect -->
-      <div class="slide"><img src="image/html.png" alt="HTML"></div>
-      <div class="slide"><img src="image/css.png" alt="CSS"></div>
-      <div class="slide"><img src="image/js.png" alt="JavaScript"></div>
-      <div class="slide"><img src="image/canva.png" alt="canva"></div>
-      <div class="slide"><img src="image/figma.png" alt="Figma"></div>
-      <div class="slide"><img src="image/git.png" alt="GitHub"></div>
-      <div class="slide"><img src="image/vs code.png" alt="VS Code"></div>
-    </div>
-  </div>
-
-  <br>
-
-  <!-- Second slider (moves right) -->
-  <div class="slider slider-right">
-    <div class="slide-track">
-      <div class="slide"><img src="image/any desk.png" alt="AnyDesk"></div>
-      <div class="slide"><img src="image/from.png" alt="From"></div>
-      <div class="slide"><img src="image/it support.png" alt="IT Support"></div>
-      <div class="slide"><img src="image/windows.png" alt="Windows"></div>
-      <div class="slide"><img src="image/word.png" alt="Word"></div>
-      <div class="slide"><img src="image/c.png" alt="C"></div>
-      <div class="slide"><img src="image/cloud.png" alt="Cloud"></div>
-
-      <!-- Duplicate for infinite effect -->
-      <div class="slide"><img src="image/any desk.png" alt="AnyDesk"></div>
-      <div class="slide"><img src="image/from.png" alt="From"></div>
-      <div class="slide"><img src="image/it support.png" alt="IT Support"></div>
-      <div class="slide"><img src="image/windows.png" alt="Windows"></div>
-      <div class="slide"><img src="image/word.png" alt="Word"></div>
-      <div class="slide"><img src="image/c.png" alt="C"></div>
-      <div class="slide"><img src="image/cloud.png" alt="Cloud"></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Service Section -->
- <section id="services" class="services-section">
-  <h2 class="section-title">My Services</h2>
-
-  <div class="services-grid">
-    <div class="service-card">
-      <i class="fas fa-pencil-ruler"></i>
-      <h3>UI/UX Designing</h3>
-      <p>Designing intuitive, engaging, and user-friendly interfaces using Figma and Adobe XD.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-brain"></i>
-      <h3>AI Agents</h3>
-      <p>Smart AI Agents designed to automate operations, reduce manual work, and deliver faster, more accurate results.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-sitemap"></i>
-      <h3>AI Workflow</h3>
-      <p>AI-powered workflows that streamline operations, improve accuracy, and make your business run smarter.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-code"></i>
-      <h3>Front-end Development</h3>
-      <p>Building responsive websites with HTML, CSS, JavaScript, and modern frameworks.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-headset"></i>
-      <h3>IT Consulting</h3>
-      <p>Expert IT consulting to optimize your technology, solve technical challenges, and support your business goals.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-search"></i>
-      <h3>Search Engine Optimization</h3>
-      <p>Improving your website’s visibility and ranking through modern SEO strategies.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fas fa-database"></i>
-      <h3>Database Management</h3>
-      <p>Managing and maintaining efficient databases using MySQL and cloud storage solutions.</p>
-    </div>
-
-    <div class="service-card">
-      <i class="fab fa-linkedin"></i>
-      <h3>LinkedIn Optimization</h3>
-      <p>Optimizing your LinkedIn profile to stand out and attract recruiters or clients.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Certificate Section -->
- <section class="certifications" id="certifications">
-  <h2 class="section-title">My <span>Certifications</span></h2>
-  <div class="certification-container">
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Oracle Data Platform 2025 Certified Foundations Associate</h3>
-      <p>Oracle | 2025</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Azure integrations and benefits in Windows Server 2025</h3>
-      <p>Microsoft | 2025</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Foundations of user experience and design thinking</h3>
-      <p>Microsoft | 2024</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Designing User Interfaces and Experiences (UI/UX)</h3>
-      <p>IBM | 2024</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Fundamental AI Concepts</h3>
-      <p>Microsoft | 2024</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Create High-Fidelity Designs and Prototypes in Figma</h3>
-      <p>Google | 2024</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Build Wireframes and Low-Fidelity Prototypes</h3>
-      <p>Google | 2024</p>
-    </div>
-
-    <div class="cert-card">
-      <i class="fas fa-certificate"></i>
-      <h3>Cybersecurity for Everyone</h3>
-      <p>University of Maryland | 2023</p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- project Section -->
-  <section id="projects" class="projects-section">
-  <h2 class="section-title">My Projects</h2>
-
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/fashion.png" alt="Project 1">
-      </div>
-      <div class="project-content">
-        <h3>FASHION BOUTIQUE (UI/UX)</h3>
-        <p>Designed a smart dress-finding app that helps users discover outfits based on style, occasion, and location with a clean, personalized interface.</p>
-        <a href="https://www.figma.com/design/VUjIvS9xRj1qIAEQTOhhov/BOUTIQUE?node-id=0-1&t=VhtVp5wMkGOTrHKS-1" target="_blank" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/Tengah.png" alt="Project 2">
-      </div>
-      <div class="project-content">
-        <h3>TENGAH (UI/UX)</h3>
-        <p>Designed a mobile app to help foreigners in Tengah easily find local food, services, and daily essentials with an intuitive and location-based interface.</p>
-        <a href="https://www.figma.com/design/p4cpdCv84kYNrOXsH1YCX2/TENGAH?node-id=0-1&t=TRhACsDr14Lcq7vG-1" target="_blank" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/qatar.png" alt="Project 3">
-      </div>
-      <div class="project-content">
-        <h3>QATAR UNIVERSITY (UI/UX)</h3>
-        <p>Redesigned the Qatar University website with a modern, user-centered layout to enhance accessibility, improve user experience across all devices.</p>
-        <a href="https://www.figma.com/design/szQ2o1CIXWVw1s9YUOIy2f/Qatar-University-Redesign?node-id=0-1&t=zpESPZs0GrCMOVQ4-1" target="_blank" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/port.png" alt="Project 2">
-      </div>
-      <div class="project-content">
-        <h3>Portfolio website (Development)</h3>
-        <p>A professional showcase of my UI/UX design and development projects, featuring modern, responsive, intuitive, and user-friendly interfaces, highlighting creativity, functionality, and practical problem-solving skills.</p>
-        <a href="https://zimam-portfolio.vercel.app/" target="_blank" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/pos.png" alt="Project 2">
-      </div>
-      <div class="project-content">
-        <h3>Food Shop Pos (Development)</h3>
-        <p>A web-based POS for small food shops with a scrollable menu, real-time order updates, payment success popup, and automatic PDF receipt generation. Simple, fast, user-friendly, easy to understand, and quick to adapt and beginner Friendly.</p>
-        <a href="https://point-of-sales-pink.vercel.app/" target="_blank" class="project-btn">View Project</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="image/gymweb.png" alt="Project 2">
-      </div>
-      <div class="project-content">
-        <h3>FitZone (Development)</h3>
-        <p>FitZone Gym Web Application is a responsive platform showcasing gym programs, membership plans, client testimonials, and a sign-up form, built with HTML, CSS, and JavaScript for a clean and professional user experience.</p>
-        <a href="https://gymwep.vercel.app/" target="_blank" class="project-btn">View Project</a>
-      </div>
-  </div>
-</section>
-
-
-  <!-- Education Section -->
-   <section id="education" class="education-section">
-  <h2 class="section-title">Education</h2>
-  
-  <div class="education-container">
-    <div class="education-card">
-      <h3>BEng(Hons) in Software Engineering</h3>
-      <p class="education-institute">London Metropolitan University</p>
-      <p class="education-year">2024 - 2025</p>
-      <p class="education-desc">BEng (Hons) in Software Engineering, focusing on modern software development practices, system design, and innovative technology solutions.</p>
-    </div>
-
-    <div class="education-card">
-      <h3>Higher National Diploma in Software Engineering</h3>
-      <p class="education-institute">Pearson College London</p>
-      <p class="education-year">2023 - 2024</p>
-      <p class="education-desc">Higher National Diploma in Software Engineering with comprehensive knowledge in software development, networking concepts, database management, and system design.</p>
-    </div>
-
-    <div class="education-card">
-      <h3>Diploma in Information Technology</h3>
-      <p class="education-institute">Esoft Metro Campus</p>
-      <p class="education-year">2022 - 2023</p>
-      <p class="education-desc">Diploma in Information Technology focused on IT fundamentals, networking, system maintenance, and practical computing skills.</p>
-    </div>
-
-    <div class="education-card">
-      <h3>Diploma in English</h3>
-      <p class="education-institute">Esoft Metro Campus</p>
-      <p class="education-year">2022 - 2023</p>
-      <p class="education-desc">The Diploma in English helps students improve reading, writing, listening, and speaking skills. It focuses on grammar, vocabulary, and communication for study, work, and daily life.</p>
-    </div>
-
-  </div>
-  
-</section>
-
-
-  <!-- Contact Section -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <!-- Left Side -->
-    <div class="contact-left">
-      <h2>Let’s Work Together</h2>
-      <p>Have a project in mind or want to collaborate? Feel free to get in touch or follow me on my social platforms.</p>
-
-      <h3>Follow Me</h3>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/mohamedzimam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.behance.net/zimammohamed" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
-        <a href="https://github.com/ZimamMohamed" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://wa.me/0778269372" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/zimam_jm?igsh=MWc1a2lsbzFlcmRnZQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-
-    <!-- Right Side -->
-    <div class="contact-right">
-      <form action="https://formspree.io/f/xjkpneop" method="post">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        
+        <!-- EDIT: HERO — your name -->
+        <h1 class="hero-title">
+          Hi, I'm <span class="grad-text">Zimam Jaufer</span>.<br>
+          I design products<br> people <em>actually</em> enjoy using.
+        </h1>
+        <!-- EDIT: HERO — your tagline -->
+        <p class="hero-sub">
+          <strong>UX/UI Designer</strong> with 3+ years of experience creating intuitive, user-centered digital products. I combine UX research, UI design, and design thinking to craft seamless web and mobile experiences that solve real user problems and drive business success.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View my work</a>
+          <a href="images/ZimamUXNN.pdf" class="btn btn-ghost" download>Download résumé</a>
         </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">years in UX/UI design</span></div>
+          <div class="stat"><span class="stat-num">30+</span><span class="stat-label">products shipped</span></div>
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Proffesional Certification</span></div>
         </div>
-        <div class="form-group">
-          <input type="tel" name="phone" placeholder="Your Phone" required>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="glass hero-photo-card">
+          <!-- EDIT: swap images/profile.jpg with your headshot -->
+          <img src="images/zimam.jpeg" alt="Portrait of zimam" class="hero-photo">
+          <span class="glass badge badge-top">🟢 Available for Work</span>
+          <span class="glass badge badge-bottom">
+            <strong>Product Design</strong>
+            <small>UX Research · UI · Design Systems</small>
+          </span>
         </div>
-        <div class="form-group">
-          <input type="text" name="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
-        </div>
-        <button type="submit" class="btn-send">Send Message</button>
-      </form>
+      </div>
     </div>
-  </div>
-</section>
+    <div class="scroll-cue" aria-hidden="true"><span></span>Scroll</div>
+  </section>
 
-  </div>
-</section>
+  <!-- ============ LOGO STRIP ============ -->
+  <section class="logos reveal">
+    <p class="logos-label">Trusted by teams at</p>
+    <div class="logos-row">
+      <!-- EDIT: swap these with real client/company names -->
+      <span>Japa</span>
+      <span>Fashion Boutique</span>
+      <span>Tengah</span>
+    </div>
+  </section>
 
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <p class="eyebrow">About</p>
+      <h2>Design is a way of listening.</h2>
+    </div>
+    <div class="about-grid">
+      <!-- EDIT: ABOUT — rewrite this bio -->
+      <div class="glass about-card reveal">
+        <p>
+          I am a UI/UX Designer with 3+ years of hands-on experience building user-centered digital products for web and mobile platforms.
+        </p>
+        <p>
+          With a background in Software Engineering, I bridge the gap between design, technology, and user experience, enabling me to create solutions that are not only visually engaging but also technically feasible and scalable. My focus is on delivering meaningful experiences that align user needs with business goals through research-driven and innovation-led design.
+        </p>
+        <p>
+          My expertise spans the full product design lifecycle, including user research, UX strategy, competitor analysis, information architecture, wireframing, prototyping, and high-fidelity UI design. I strongly believe in continuous iteration and data-informed design decisions to improve usability and product impact.
+        </p>
+        <p>
+          I also actively explore AI-powered design tools and workflows to enhance creativity, speed up ideation, and develop more innovative and efficient design solutions.
+        </p>
+      </div>
 
+      <div class="skills-card glass reveal">
+        <h3>Tools &amp; Craft</h3>
+        <div class="chip-group">
+          <span class="chip">Figma</span>
+          <span class="chip">Framer</span>
+          <span class="chip">Webflow</span>
+          <span class="chip">Protopie</span>
+          <span class="chip">Notion</span>
+          <span class="chip">Miro</span>
+          <span class="chip">Adobe XD</span>
+          <span class="chip">Principle</span>
+        </div>
+        <h3>Focus Areas</h3>
+        <ul class="skill-list">
+          <li><span>UX Research</span><div class="bar"><i style="width:97%"></i></div></li>
+          <li><span>UI Design</span><div class="bar"><i style="width:96%"></i></div></li>
+          <li><span>Design Systems</span><div class="bar"><i style="width:88%"></i></div></li>
+          <li><span>Prototyping</span><div class="bar"><i style="width:90%"></i></div></li>
+          <li><span>Product Strategy</span><div class="bar"><i style="width:90%"></i></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Mohamed Zimam | All rights reserved</p>
-  </footer>
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected Work</p>
+      <h2>A few products I've shaped end to end.</h2>
+    </div>
+
+    <div class="work-grid">
+      <!-- EDIT: PROJECT 1 -->
+      <a href="#" class="glass work-card reveal">
+        <div class="work-media"><img src="images/ten.png" alt="TENGAH"></div>
+        <div class="work-body">
+          <div class="work-tags"><span>TENGAH</span><span>Mobile App</span></div>
+          <h3>TENGAH</h3>
+          <p>Designed a mobile app to help foreigners in Tengah easily find local food, services, and daily essentials with an intuitive and location-based interface.</p>
+          <span class="">View case study <i>→</i></span>
+        </div>
+      </a>
+
+      <!-- EDIT: PROJECT 2 -->
+      <a href="#" class="glass work-card reveal">
+        <div class="work-media"><img src="images/japa.png" alt="JAPA"></div>
+        <div class="work-body">
+          <div class="work-tags"><span>JAPA Community</span><span>Mobile App</span></div>
+          <h3>JAPA</h3>
+          <p>Designed a social community app that enables expatriates to discover local communities, join interest-based groups, and build meaningful connections through a seamless and engaging user experience.</p>
+          <span class="work-link">View case study <i>→</i></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section" id="process">
+    <div class="section-head reveal">
+      <p class="eyebrow">How I Work</p>
+      <h2>Four steps, every project.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="glass process-card reveal">
+        <span class="process-num">01</span>
+        <h3>Discover</h3>
+        <p>Stakeholder interviews, user research, and competitive analysis to find the real problem, not just the stated one.</p>
+      </div>
+      <div class="glass process-card reveal">
+        <span class="process-num">02</span>
+        <h3>Define</h3>
+        <p>Turning research into clear problem statements, flows, and success metrics the whole team can align around.</p>
+      </div>
+      <div class="glass process-card reveal">
+        <span class="process-num">03</span>
+        <h3>Design</h3>
+        <p>Rapid wireframes to high-fidelity UI, tested with real users at every stage before a single line of code ships.</p>
+      </div>
+      <div class="glass process-card reveal">
+        <span class="process-num">04</span>
+        <h3>Deliver</h3>
+        <p>Detailed handoff, design QA, and post-launch iteration based on real usage data — design doesn't stop at launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="section-head reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked.</h2>
+    </div>
+    <!-- EDIT: EXPERIENCE — update roles, companies, dates -->
+    <div class="timeline">
+      <div class="glass timeline-row reveal">
+        <div class="timeline-when">2022 — Present</div>
+        <div class="timeline-what">
+          <h3>UX Designer <span>· Upwork</span></h3>
+          <p>Leading design for the patient mobile app and Web applications</p>
+        </div>
+      </div>
+      <div class="glass timeline-row reveal">
+        <div class="timeline-when">2023 — 2025</div>
+        <div class="timeline-what">
+          <h3>UI/UX Designer <span>· Elegant media</span></h3>
+          <p>Designing user-centered dashboards, landing pages, and Mobile applications with Figma and Adobe XD. Focused on enhancing usability and aesthetics for clients across multiple industries; mentoring two junior designers.</p>
+        </div>
+      </div>
+      <div class="glass timeline-row reveal">
+        <div class="timeline-when">2022 — Present</div>
+        <div class="timeline-what">
+          <h3>UI/UX Designer <span>· Fiverr</span></h3>
+          <p>Designed web and mobile experiences for early-stage startups across health, travel, and Sports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" id="testimonials">
+    <div class="section-head reveal">
+      <p class="eyebrow">Kind Words</p>
+      <h2>What people I've worked with say.</h2>
+    </div>
+    <!-- EDIT: TESTIMONIALS -->
+    <div class="testi-grid">
+      <div class="glass testi-card reveal">
+        <p>"The design perfectly captured our vision while making the shopping experience simple and enjoyable. Every screen feels intuitive, visually appealing, and focused on helping users find the right outfit quickly."</p>
+        <div class="testi-person"><strong>John</strong><span>FASHION BOUTIQUE (UI/UX)</span></div>
+      </div>
+      <div class="glass testi-card reveal">
+        <p>"The user experience was thoughtfully designed around real user needs. The interface is clean, easy to navigate, and makes it much simpler for newcomers to discover essential services in the area."</p>
+        <div class="testi-person"><strong>Daniel Osei</strong><span>TENGAH (UI/UX)</span></div>
+      </div>
+      <div class="glass testi-card reveal">
+        <p>"The redesigned website is modern, accessible, and significantly easier to navigate. The focus on usability and responsive design created a much better experience for students, faculty, and visitors."</p>
+        <div class="testi-person"><strong>Project Reviewer</strong><span>QATAR UNIVERSITY (UI/UX)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="glass contact-panel reveal">
+      <p class="eyebrow">Contact</p>
+      <!-- EDIT: CONTACT — your headline -->
+      <h2>Got a product that needs shaping?</h2>
+      <p class="contact-sub">I'm currently open to freelance projects and full-time roles starting Q4. Reach out - I usually reply within a day.</p>
+      <div class="contact-actions">
+        <!-- EDIT: CONTACT — your email -->
+        <a href="mailto:jmzimam18@gmail.com" class="btn btn-primary">jmzimam18@gmail.com</a>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/mohamedzimam/" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://www.instagram.com/zimam.10/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.behance.net/zimammohamed" aria-label="Behance">Behance</a>
+          <a href="https://x.com/MhdZimam" aria-label="Twitter / X">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Zimam.</p>
+  <a href="#top" class="back-top">Back to top ↑</a>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
