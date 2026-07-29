@@ -1,25 +1,26 @@
 /* ==========================================================
    ALEX RIVERA — PRODUCT / UI-UX DESIGNER PORTFOLIO
-   Glassmorphism theme
+   Light theme — refined glass surfaces on a soft studio-white canvas
    Edit the :root block below to re-theme the entire site.
    ========================================================== */
 
 :root {
   /* ---- Color tokens ---- */
-  --bg-deep: #0a0a18;
-  --bg-deep-2: #0d0d22;
-  --violet: #6c5ce7;
-  --cyan: #00d9ff;
-  --pink: #ff6ec7;
+  --bg-deep: #fafaff;      /* page canvas — soft cool white, not stark */
+  --bg-deep-2: #f2f1fa;    /* secondary surface (mobile nav, etc.) */
 
-  --text-primary: #f5f5fa;
-  --text-muted: #a6a6c2;
-  --text-faint: #6f6f92;
+  --violet: #5b4fe9;       /* primary accent — refined indigo */
+  --cyan: #0ea5a8;         /* secondary accent — deep teal, readable on white */
+  --pink: #ff6f91;         /* tertiary accent — used sparingly */
 
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-bg-strong: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.14);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --text-primary: #14141f; /* near-black ink */
+  --text-muted: #53546b;
+  --text-faint: #8688a0;
+
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-bg-strong: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(20, 20, 45, 0.09);
+  --glass-shadow: 0 8px 32px rgba(30, 30, 70, 0.08);
 
   --accent-grad: linear-gradient(120deg, var(--violet), var(--cyan));
 
@@ -59,7 +60,7 @@ ul { list-style: none; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; }
 
 :focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--violet);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -75,8 +76,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.55;
+  filter: blur(100px);
+  opacity: 0.4;
   will-change: transform;
 }
 .orb-1 {
@@ -103,7 +104,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
 
 .bg-grain {
   position: fixed; inset: 0; z-index: 1; pointer-events: none;
-  opacity: 0.035; mix-blend-mode: overlay;
+  opacity: 0.02; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -112,9 +113,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.6);
   position: relative;
 }
 .glass::before {
@@ -122,7 +123,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing:
   position: absolute; inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0) 40%);
+  background: linear-gradient(135deg, rgba(20,20,45,0.12), rgba(20,20,45,0) 40%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -153,10 +154,10 @@ main, header, footer { position: relative; z-index: 2; }
 }
 .btn-primary {
   background: var(--accent-grad);
-  color: #060612;
-  box-shadow: 0 8px 24px rgba(108,92,231,0.35);
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(91,79,233,0.28);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,217,255,0.35); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(14,165,168,0.3); }
 .btn-ghost {
   background: var(--glass-bg);
   border-color: var(--glass-border);
@@ -308,12 +309,12 @@ main, header, footer { position: relative; z-index: 2; }
 .chip-group { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip {
   padding: 7px 14px; border-radius: 999px; font-size: 0.82rem;
-  background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+  background: rgba(20,20,45,0.04); border: 1px solid var(--glass-border);
   color: var(--text-muted);
 }
 .skill-list li { margin-bottom: 14px; }
 .skill-list span { display: block; font-size: 0.84rem; color: var(--text-muted); margin-bottom: 6px; }
-.bar { height: 5px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+.bar { height: 5px; border-radius: 999px; background: rgba(20,20,45,0.08); overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--accent-grad); border-radius: 999px; }
 
 /* ---------------- Work ---------------- */
@@ -323,7 +324,7 @@ main, header, footer { position: relative; z-index: 2; }
   display: flex; flex-direction: column;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-.work-card:hover { transform: translateY(-6px); box-shadow: 0 20px 46px rgba(0,0,0,0.45); }
+.work-card:hover { transform: translateY(-6px); box-shadow: 0 20px 46px rgba(30,30,70,0.14); }
 .work-media { aspect-ratio: 16/11; overflow: hidden; }
 .work-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .work-card:hover .work-media img { transform: scale(1.06); }
@@ -332,7 +333,7 @@ main, header, footer { position: relative; z-index: 2; }
 .work-tags span {
   font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase;
   padding: 4px 10px; border-radius: 999px;
-  background: rgba(255,255,255,0.06); color: var(--cyan);
+  background: rgba(14,165,168,0.08); color: var(--cyan);
   border: 1px solid var(--glass-border);
 }
 .work-body h3 { font-size: 1.2rem; margin-bottom: 10px; }
@@ -344,7 +345,7 @@ main, header, footer { position: relative; z-index: 2; }
 /* ---------------- Process ---------------- */
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .process-card { padding: 30px 26px; }
-.process-num { font-family: var(--font-display); font-size: 1.6rem; color: var(--cyan); opacity: 0.8; }
+.process-num { font-family: var(--font-display); font-size: 1.6rem; color: var(--cyan); opacity: 0.85; }
 .process-card h3 { margin: 14px 0 10px; font-size: 1.1rem; }
 .process-card p { color: var(--text-muted); font-size: 0.9rem; }
 
